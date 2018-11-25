@@ -1,51 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/relativelayout_bg">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+
+    <Button
+        android:id="@+id/button_imageCapture"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:weightSum="2"
-        android:orientation="horizontal">
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="bottom|left"
+        android:layout_weight="1"
+        android:text="Capture Image" />
 
-        <Button
-            android:id="@+id/button_capture"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="bottom|left"
-            android:text="CaptureImage" />
-
-        <Button
-            android:id="@+id/button_video"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="bottom|right"
-            android:text="RecordVideo" />
+    <Button
+        android:id="@+id/button_videoRecord"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_imageCapture"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="bottom|right"
+        android:layout_weight="1"
+        android:text="Record Video" />
 
 
-    </LinearLayout>
+    <Button
+        android:id="@+id/button_loadFile"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_videoRecord"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="bottom|right"
+        android:layout_weight="1"
+        android:text="Load Image/ Video..." />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="8">
 
-        <ImageView
-            android:id="@+id/imageView_preview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="30dp"
-            android:scaleType="fitXY"
-            app:srcCompat="@mipmap/ic_launcher" />
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
 
-    </LinearLayout>
+    <!--android:weightSum="8">-->
 
-</LinearLayout>
+    <!--<ImageView-->
+    <!--android:id="@+id/imageView_preview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_margin="30dp"-->
+    <!--android:scaleType="fitXY"-->
+    <!--app:srcCompat="@mipmap/ic_launcher" />-->
+
+    <!--</LinearLayout>-->
+
+</RelativeLayout>
 
